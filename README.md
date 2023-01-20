@@ -3,10 +3,7 @@
 This is a Terraform repository for deploying an Apache web server to ECS Fargate in AWS.
 
 ## System Design
-
-## Design Choices
-
-
+![Alt text](system-design-rapha.png)
 
 ## Usage
 
@@ -44,4 +41,22 @@ Changes to Outputs:
 Recommend using tfenv for Terraform version management - https://github.com/tfutils/tfenv
 
 ## Considerations
+#### How could you improve the deployment, or usability?
+- Go multi-region, or even multi-cloud for higher availability
+- Modularise the Terraform services for reusability
+- Configure auto-scaling
+- Have a greater pod count (increase ecs_node_count variable)
+- Setup an application codebase alongside the terraform directory and have Github Actions automatically build an image and deploy to ECR after new commits
+- Implement a monitoring stack for the server
 
+#### How could you improve the deployment, or usability?
+- The system is already moderately secure. The containers live inside a private subnet, only accessible through the Application Load Balancer.
+- The ALB and containers both only allow incoming traffic through port 80 due to the configured Security Groups.
+- Can set up an SSL certificate for the server and only route traffic from port 443 into the containers.
+
+#### How could you give visibility to the users that are accessing the webpage?
+- Users can access via the load balancer URL described in the Terraform output. 
+- We can configure CNAMEs in Route 53 for custom domain names.
+
+#### How could you open up collaboration on this project?
+- The project is publicly available on Github. Anyone can contribute.
