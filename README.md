@@ -37,7 +37,7 @@ Changes to Outputs:
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14.7 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.7.0 |
-| <a name="requirement_docker"></a> [docker](#requirement\_docker) | ~> 19.03.6 | 
+| <a name="requirement_docker"></a> [docker](#requirement\_docker) | >= 19.03.6 | 
 
 Recommend using tfenv for Terraform version management - https://github.com/tfutils/tfenv
 
