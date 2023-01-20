@@ -49,7 +49,7 @@ Recommend using tfenv for Terraform version management - https://github.com/tfut
 - Setup an application codebase alongside the terraform directory and have Github Actions automatically build an image and deploy to ECR after new commits.
 - Implement a monitoring stack for the server.
 
-#### How could you improve the deployment, or usability?
+#### What security mechanisms might we need to put into place?
 - The system is already moderately secure. The containers live inside a private subnet, only accessible through the Application Load Balancer.
 - The ALB and containers both only allow incoming traffic through port 80 due to the configured Security Groups.
 - Can set up an SSL certificate for the server and only route traffic from port 443 into the containers.
