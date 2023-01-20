@@ -42,12 +42,12 @@ Recommend using tfenv for Terraform version management - https://github.com/tfut
 
 ## Considerations
 #### How could you improve the deployment, or usability?
-- Go multi-region, or even multi-cloud for higher availability
-- Modularise the Terraform services for reusability
-- Configure auto-scaling
-- Have a greater pod count (increase ecs_node_count variable)
-- Setup an application codebase alongside the terraform directory and have Github Actions automatically build an image and deploy to ECR after new commits
-- Implement a monitoring stack for the server
+- Go multi-region, or even multi-cloud for higher availability.
+- Modularise the Terraform services for reusability.
+- Configure auto-scaling.
+- Have a greater pod count (increase ecs_node_count variable).
+- Setup an application codebase alongside the terraform directory and have Github Actions automatically build an image and deploy to ECR after new commits.
+- Implement a monitoring stack for the server.
 
 #### How could you improve the deployment, or usability?
 - The system is already moderately secure. The containers live inside a private subnet, only accessible through the Application Load Balancer.
